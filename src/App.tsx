@@ -10,6 +10,14 @@ import CashierPage from './pages/CashierPage.tsx';
 import TransactionHistoryPage from './pages/TransactionHistoryPage.tsx';
 import ManageMembersPage from './pages/ManageMembersPage.tsx';
 
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  category: string;
+  image: string;
+}
+
 // --- Mock Data and Constants ---
 const initialProducts: Product[] = [
   { id: 1, name: 'Classic Burger', price: 5.99, category: 'Meals', image: 'https://placehold.co/300x200/FFC0CB/000000?text=Burger' },
@@ -32,10 +40,10 @@ export interface CartItem extends Product {
 
 // Komponen Layout ini memastikan Sidebar selalu tampil
 const AppLayout: React.FC = () => (
-  <div className="flex bg-gray-50 min-h-screen">
+  <div className="flex bg-gray-50 h-screen overflow-hidden">
     <Sidebar />
     {/* <Outlet> adalah tempat halaman dinamis akan ditampilkan */}
-    <main className="flex-1 flex flex-col overflow-hidden">
+    <main className="flex-1 flex flex-col overflow-auto">
       <Outlet />
     </main>
   </div>

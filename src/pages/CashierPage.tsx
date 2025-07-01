@@ -1,6 +1,4 @@
-import { useState } from "react";
 import Products from "../components/CashierPage/Products";
-import TopBar from "../components/TopBar/TopBar";
 import SearchBar from "../components/TopBar/Searchbar";
 
 const addToCart = (product) => {

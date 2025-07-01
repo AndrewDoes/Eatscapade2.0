@@ -42,7 +42,7 @@ const NavItem: React.FC<NavItemProps> = ({ icon, children, to }) => {
 // Komponen Sidebar utama, ditambahkan tipe React.FC
 const Sidebar: React.FC = () => {
   return (
-    <aside className="flex sm-flex-col h-screen w-64 bg-white p-6 flex flex-col shadow-lg">
+    <aside className="sticky flex sm-flex-col h-screen w-64 bg-white p-6 flex flex-col shadow-lg">
       {/* Logo */}
       <div className="mb-10">
         <h1 className="text-3xl font-bold">
