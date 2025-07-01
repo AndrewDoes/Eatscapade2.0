@@ -1,0 +1,5 @@
+const CashierProgram = () => {
+    return{
+        
+    }
+}
